@@ -10,7 +10,7 @@ class Rain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<RainController>(
-        init: Get.put(RainController()),
+        init: Get.find<RainController>(), // moved to window_page !
         builder: (controller) {
           return Stack(
               children: controller.rainDropId

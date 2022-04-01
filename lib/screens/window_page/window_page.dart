@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:weather/screens/window_page/local_utils/window_controller.dart';
+import 'package:weather/screens/window_page/local_widgets/rain/local_utils/rain_controller.dart';
 import 'package:weather/screens/window_page/local_widgets/rain/rain.dart';
 
 class WindowPage extends StatelessWidget {
@@ -17,6 +18,7 @@ class WindowPage extends StatelessWidget {
   }
 
   Widget window(WindowController controller) {
+    Get.put(RainController());
     return Center(
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 20),
